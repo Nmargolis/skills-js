@@ -305,10 +305,17 @@
 
 <script>
   // put your code here
+  function fadeInPorcupine() {
+    porcupine = $('#cute-porcupine-image');
+    porcupine.fadeIn( 1000, 
+    function() { 
+      porcupine.attr('style', 'display:block');
+      })
+
+  }
+
   function showPorcupine() {
-
- setTimeout( function() { $('#cute-porcupine-image').attr('style', 'display:block');}, 3000);
-
+    setTimeout(fadeInPorcupine, 2000);
   }
 
   $('#make-a-porcupine').on('click', showPorcupine);
